@@ -26,13 +26,14 @@ export const NavbarRoutes = () => {
           <SearchInput />
         </div>
       )}
-      <div className="flex w-60 justify-center items-center">
+
+      <div className="flex w-60 justify-between items-center ">
         <Image
         src="/CEDBigLogo.png"
         alt="logo"
         width={260}
         height={100}
-        className="rounded-lg shadow-black shadow-2xl"
+        className="rounded-lg shadow-black shadow-2xl min-w-full"
         />
       </div>
       <div className="flex gap-x-2 ml-auto">
