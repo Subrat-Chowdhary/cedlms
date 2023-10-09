@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { isTeacher } from "@/lib/teacher";
 
 import { SearchInput } from "./search-input";
+import Image from "next/image";
 
 export const NavbarRoutes = () => {
   const { userId } = useAuth();
@@ -21,10 +22,19 @@ export const NavbarRoutes = () => {
   return (
     <>
       {isSearchPage && (
-        <div className="hidden md:block">
+        <div className="hidden md:block md:mr-10">
           <SearchInput />
         </div>
       )}
+      <div className="flex w-60 justify-center items-center">
+        <Image
+        src="/CEDBigLogo.png"
+        alt="logo"
+        width={260}
+        height={100}
+        className="rounded-lg shadow-black shadow-2xl"
+        />
+      </div>
       <div className="flex gap-x-2 ml-auto">
         {isTeacherPage || isCoursePage ? (
           <Link href="/">

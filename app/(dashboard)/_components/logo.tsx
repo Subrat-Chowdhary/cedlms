@@ -6,7 +6,8 @@ export const Logo = () => {
       height={130}
       width={130}
       alt="logo"
-      src="/logo.svg"
+      src="/smallLogo.png"
+      className="rounded-lg shadow-black shadow-2xl"
     />
   )
 }
