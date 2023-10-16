@@ -49,7 +49,7 @@ export const SidebarItem = ({
       </div>
       <div
         className={cn(
-          "ml-auto opacity-0 border-4 rounded-2xl border-yellow-400 h-full transition-all",
+          "ml-auto opacity-0 border-4 rounded-2xl border-black h-full transition-all",
           isActive && "opacity-100"
         )}
       />

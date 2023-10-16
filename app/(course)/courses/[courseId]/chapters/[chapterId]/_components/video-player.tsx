@@ -59,12 +59,12 @@ export const VideoPlayer = ({
   return (
     <div className="relative aspect-video">
       {!isReady && !isLocked && (
-        <div className="absolute inset-0 flex items-center justify-center bg-slate-800">
+        <div className="absolute inset-0 flex items-center justify-center bg-green-900 rounded-xl">
           <Loader2 className="h-8 w-8 animate-spin text-secondary" />
         </div>
       )}
       {isLocked && (
-        <div className="absolute inset-0 flex items-center justify-center bg-slate-800 flex-col gap-y-2 text-secondary">
+        <div className="absolute inset-0 flex items-center justify-center bg-green-900 rounded-xl flex-col gap-y-2 text-secondary">
           <Lock className="h-8 w-8" />
           <p className="text-sm">
             This chapter is locked
@@ -75,7 +75,8 @@ export const VideoPlayer = ({
         <MuxPlayer
           title={title}
           className={cn(
-            !isReady && "hidden"
+            isReady ? "rounded-xl" : "",
+            !isReady ? "hidden" : ""
           )}
           onCanPlay={() => setIsReady(true)}
           onEnded={onEnd}
