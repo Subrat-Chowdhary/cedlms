@@ -27,15 +27,16 @@ export const NavbarRoutes = () => {
         </div>
       )}
 
-      <div className="flex w-60 justify-between items-center ">
+      {/* <div className="flex w- mt-5 justify-center items-center">
         <Image
         src="/CEDBigLogo.png"
         alt="logo"
-        width={260}
-        height={100}
+        width={300}
+        height={50}
         className="rounded-lg shadow-black shadow-2xl min-w-full"
         />
-      </div>
+      </div> */}
+
       <div className="flex gap-x-2 ml-auto">
         {isTeacherPage || isCoursePage ? (
           <Link href="/">
@@ -47,7 +48,7 @@ export const NavbarRoutes = () => {
         ) : isTeacher(userId) ? (
           <Link href="/teacher/courses">
             <Button size="sm" variant="ghost">
-              Teacher mode
+              Admin mode
             </Button>
           </Link>
         ) : null}
