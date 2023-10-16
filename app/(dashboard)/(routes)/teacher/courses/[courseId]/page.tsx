@@ -1,6 +1,6 @@
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
-import { CircleDollarSign, File, LayoutDashboard, ListChecks } from "lucide-react";
+import { CircleDollarSign, File, IndianRupeeIcon, LayoutDashboard, ListChecks } from "lucide-react";
 
 import { db } from "@/lib/db";
 import { IconBadge } from "@/components/icon-badge";
@@ -81,10 +81,10 @@ const CourseIdPage = async ({
       <div className="p-6">
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-y-2">
-            <h1 className="text-2xl font-medium">
+            <h1 className="text-2xl font-medium text-white">
               Course setup
             </h1>
-            <span className="text-sm text-slate-700">
+            <span className="text-sm text-white">
               Complete all fields {completionText}
             </span>
           </div>
@@ -98,7 +98,7 @@ const CourseIdPage = async ({
           <div>
             <div className="flex items-center gap-x-2">
               <IconBadge icon={LayoutDashboard} />
-              <h2 className="text-xl">
+              <h2 className="text-xl text-white">
                 Customize your course
               </h2>
             </div>
@@ -127,7 +127,7 @@ const CourseIdPage = async ({
             <div>
               <div className="flex items-center gap-x-2">
                 <IconBadge icon={ListChecks} />
-                <h2 className="text-xl">
+                <h2 className="text-xl text-white">
                   Course chapters
                 </h2>
               </div>
@@ -138,8 +138,8 @@ const CourseIdPage = async ({
             </div>
             <div>
               <div className="flex items-center gap-x-2">
-                <IconBadge icon={CircleDollarSign} />
-                <h2 className="text-xl">
+                <IconBadge icon={IndianRupeeIcon} />
+                <h2 className="text-xl text-white">
                   Sell your course
                 </h2>
               </div>
@@ -151,7 +151,7 @@ const CourseIdPage = async ({
             <div>
               <div className="flex items-center gap-x-2">
                 <IconBadge icon={File} />
-                <h2 className="text-xl">
+                <h2 className="text-xl text-white">
                   Resources & Attachments
                 </h2>
               </div>

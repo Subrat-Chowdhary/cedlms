@@ -64,17 +64,17 @@ const ChapterIdPage = async ({
           <div className="w-full">
             <Link
               href={`/teacher/courses/${params.courseId}`}
-              className="flex items-center text-sm hover:opacity-75 transition mb-6"
+              className="flex text-white items-center text-sm hover:opacity-75 transition mb-6"
             >
-              <ArrowLeft className="h-4 w-4 mr-2" />
+              <ArrowLeft className="h-4 w-4 mr-2 text-white" />
               Back to course setup
             </Link>
             <div className="flex items-center justify-between w-full">
               <div className="flex flex-col gap-y-2">
-                <h1 className="text-2xl font-medium">
+                <h1 className="text-2xl font-medium text-white">
                   Chapter Creation
                 </h1>
-                <span className="text-sm text-slate-700">
+                <span className="text-sm text-white">
                   Complete all fields {completionText}
                 </span>
               </div>
@@ -92,7 +92,7 @@ const ChapterIdPage = async ({
             <div>
               <div className="flex items-center gap-x-2">
                 <IconBadge icon={LayoutDashboard} />
-                <h2 className="text-xl">
+                <h2 className="text-xl text-white">
                   Customize your chapter
                 </h2>
               </div>
@@ -110,7 +110,7 @@ const ChapterIdPage = async ({
             <div>
               <div className="flex items-center gap-x-2">
                 <IconBadge icon={Eye} />
-                <h2 className="text-xl">
+                <h2 className="text-xl text-white">
                   Access Settings
                 </h2>
               </div>
@@ -124,7 +124,7 @@ const ChapterIdPage = async ({
           <div>
             <div className="flex items-center gap-x-2">
               <IconBadge icon={Video} />
-              <h2 className="text-xl">
+              <h2 className="text-xl text-white">
                 Add a video
               </h2>
             </div>

@@ -53,6 +53,8 @@ export const DescriptionForm = ({
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
+      console.log("Coming Here CourseId = " + courseId);
+      console.log("This is Values" + values);
       await axios.patch(`/api/courses/${courseId}`, values);
       toast.success("Course updated");
       toggleEdit();
