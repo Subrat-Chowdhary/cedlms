@@ -32,7 +32,7 @@ export const Categories = ({
   items,
 }: CategoriesProps) => {
   return (
-    <div className="flex items-center gap-x-2 overflow-x-auto pb-2">
+    <div className="flex items-center gap-x-2 flex-wrap gap-6 pb-2">
       {items.map((item) => (
         <CategoryItem
           key={item.id}
