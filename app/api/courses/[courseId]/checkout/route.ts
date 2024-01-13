@@ -13,10 +13,10 @@ export async function POST(
   
   try {
     const user = await currentUser();
-    return new NextResponse("Let me check user here = " + user, { status: 200 });
-    
-    // console.log("Let me check user here : ", user);
-    return;
+
+    if (!user) {
+        return new NextResponse("Unauthorized", { status: 401 });
+    }
 
     if (!user || !user.id || !user.emailAddresses?.[0]?.emailAddress) {
       return new NextResponse("Unauthorized", { status: 401 });
