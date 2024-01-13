@@ -6,11 +6,17 @@ import { db } from "@/lib/db";
 import { stripe } from "@/lib/stripe";
 
 export async function POST(
+  
   req: Request,
   { params }: { params: { courseId: string } }
 ) {
+  
   try {
     const user = await currentUser();
+    return new NextResponse("Let me check user here = " + user, { status: 200 });
+    
+    // console.log("Let me check user here : ", user);
+    return;
 
     if (!user || !user.id || !user.emailAddresses?.[0]?.emailAddress) {
       return new NextResponse("Unauthorized", { status: 401 });

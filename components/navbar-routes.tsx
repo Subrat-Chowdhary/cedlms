@@ -10,6 +10,9 @@ import { isTeacher } from "@/lib/teacher";
 
 import { SearchInput } from "./search-input";
 
+import CEDBigLogo from "@/public/CEDBigLogo.png"
+import Image from "next/image";
+
 export const NavbarRoutes = () => {
   const { userId } = useAuth();
   const pathname = usePathname();
@@ -25,6 +28,14 @@ export const NavbarRoutes = () => {
           <SearchInput />
         </div>
       )}
+
+      <div className="hidden lg:flex">
+        <Image
+          className="h-20"
+          alt="optionalLogo"
+          src={CEDBigLogo}
+        />
+      </div>
 
       <div className="flex gap-x-2 ml-auto">
         {isTeacherPage || isCoursePage ? (
