@@ -54,7 +54,7 @@ export const CategoryForm = ({
   });
   
 
-    const handleComboboxChange = (selectedOption) => {
+    const handleComboboxChange = (selectedOption:{ value: string }) => {
     // Update the selected value in the state
     setSelectedValue(selectedOption.value);
   };
@@ -110,8 +110,8 @@ export const CategoryForm = ({
                 <FormItem>
                   <FormControl>
                       <Combobox 
-                          options={...options}
-                          onChange = ""
+                          options={options}
+
                           {...field}
                       />
                   </FormControl>
