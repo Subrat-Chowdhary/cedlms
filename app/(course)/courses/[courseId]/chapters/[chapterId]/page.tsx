@@ -55,7 +55,7 @@ const ChapterIdPage = async ({
       {isLocked && (
         <Banner
           variant="warning"
-          label="આ પ્રકરણ જોવા માટે તમારે આ કોર્સ ખરીદવાની જરૂર છે."
+          label="આ પ્રકરણ જોવા માટે તમારે આ કોર્સ ખરીદવાની જરૂર છે"
         />
       )}
       <div className="flex flex-col max-w-4xl mx-auto pb-20">

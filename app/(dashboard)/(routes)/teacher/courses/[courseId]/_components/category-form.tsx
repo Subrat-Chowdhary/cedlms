@@ -19,8 +19,8 @@ import {
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Textarea } from "@/components/ui/textarea";
 import { Combobox } from "@/components/ui/combobox";
+import { CategoryItem } from "@/app/(dashboard)/(routes)/search/_components/category-item";
 
 interface CategoryFormProps {
   initialData: Course;
@@ -32,12 +32,15 @@ const formSchema = z.object({
   categoryId: z.string().min(1),
 });
 
+
+
 export const CategoryForm = ({
   initialData,
   courseId,
   options,
 }: CategoryFormProps) => {
   const [isEditing, setIsEditing] = useState(false);
+  const [selectedValue, setSelectedValue] = useState(initialData.categoryId);
 
   const toggleEdit = () => setIsEditing((current) => !current);
 
@@ -49,6 +52,12 @@ export const CategoryForm = ({
       categoryId: initialData?.categoryId || ""
     },
   });
+  
+
+    const handleComboboxChange = (selectedOption) => {
+    // Update the selected value in the state
+    setSelectedValue(selectedOption.value);
+  };
 
   const { isSubmitting, isValid } = form.formState;
 
@@ -69,7 +78,7 @@ export const CategoryForm = ({
     <div className="mt-6 border bg-slate-100 rounded-md p-4">
       <div className="font-medium flex items-center justify-between">
         Course category
-        <Button onClick={toggleEdit} variant="ghost">
+        <Button onClick={toggleEdit} variant="default">
           {isEditing ? (
             <>Cancel</>
           ) : (
@@ -100,10 +109,11 @@ export const CategoryForm = ({
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Combobox
-                      options={...options}
-                      {...field}
-                    />
+                      <Combobox 
+                          options={...options}
+                          onChange = ""
+                          {...field}
+                      />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

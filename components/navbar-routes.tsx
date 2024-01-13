@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { isTeacher } from "@/lib/teacher";
 
 import { SearchInput } from "./search-input";
+
+import CEDBigLogo from "@/public/CEDBigLogo.png"
 import Image from "next/image";
 
 export const NavbarRoutes = () => {
@@ -27,15 +29,13 @@ export const NavbarRoutes = () => {
         </div>
       )}
 
-      {/* <div className="flex w- mt-5 justify-center items-center">
+      <div className="hidden lg:flex">
         <Image
-        src="/CEDBigLogo.png"
-        alt="logo"
-        width={300}
-        height={50}
-        className="rounded-lg shadow-black shadow-2xl min-w-full"
+          className="h-20"
+          alt="optionalLogo"
+          src={CEDBigLogo}
         />
-      </div> */}
+      </div>
 
       <div className="flex gap-x-2 ml-auto">
         {isTeacherPage || isCoursePage ? (
@@ -47,7 +47,7 @@ export const NavbarRoutes = () => {
           </Link>
         ) : isTeacher(userId) ? (
           <Link href="/teacher/courses">
-            <Button size="sm" variant="ghost">
+            <Button size="sm" variant="default">
               Admin mode
             </Button>
           </Link>

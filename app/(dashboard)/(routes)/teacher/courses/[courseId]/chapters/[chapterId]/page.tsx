@@ -20,6 +20,8 @@ const ChapterIdPage = async ({
 }) => {
   const { userId } = auth();
 
+  console.log(userId)
+
   if (!userId) {
     return redirect("/");
   }
@@ -56,7 +58,7 @@ const ChapterIdPage = async ({
       {!chapter.isPublished && (
         <Banner
           variant="warning"
-          label="This chapter is unpublished. It will not be visible in the course"
+          label="આ પ્રકરણ અપ્રકાશિત છે. તે કોર્સમાં દેખાશે નહીં"
         />
       )}
       <div className="p-6">
